@@ -1,0 +1,32 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-action':true,
+                'flex-column':true,
+                'align-items-start':true,
+                'list-group-item-success': greencolor,
+                'list-group-item-danger': redcolor }" class="media">
+  <div [ngStyle]="{'color': postLoveIts>0 ? 'green' : 'red' }" class="d-flex w-100 justify-content-between">
+    <!-- <div class="media-body"> -->
+      <h4 class="mb-1 dark">{{ postTitle }} --<small class="text-muted">Nombre de like {{ postLoveIts }}</small></h4>
+      <i class="text-muted">{{ postCreated_at }}</i>
+     
+  </div> 
+      <p class="mb-3">{{ postContent }}</p>
+    <!-- </div> -->
+  <ul class="list-inline list-unstyled">
+    <li><button [ngStyle]="{margin:10}"  class="btn btn-success"                
+                (click)="onLikeIt()">Like It</button></li>
+    <li><button class="btn btn-danger"                  
+                (click)="onDislikeIt()">Dislike It</button></li>
+  </ul>
+  
+</li>
+<!-- <div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small class="text-muted">Donec id elit non mi porta.</small>
+  </a>
+</div> -->
